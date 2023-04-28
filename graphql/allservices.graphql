@@ -1,0 +1,22 @@
+fragment service on Service {
+  name
+  slug {
+    current
+  }
+  description
+  durationHour
+  durationMinutes
+  price
+}
+
+query allServices {
+  allService {
+    ...service
+  }
+}
+
+query service($slug: String) {
+  allService(where: { slug: { current: { eq: $slug } } }) {
+    ...service
+  }
+}
