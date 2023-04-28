@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -7,6 +8,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
   ],
+
   theme: {
     extend: {
       backgroundImage: {
