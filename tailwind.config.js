@@ -17,6 +17,12 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-raleway)", ...fontFamily.sans],
       },
+      colors: {
+        bronze: "#B08D57",
+      },
+      textColor: {
+        bronze: "var(--color-bronze)",
+      },
     },
   },
   plugins: [],
