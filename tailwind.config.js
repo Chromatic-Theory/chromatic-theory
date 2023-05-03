@@ -20,7 +20,9 @@ module.exports = {
         sans: ["var(--font-raleway)", ...fontFamily.sans],
       },
       colors: {
-        bronze: "#B08D57",
+        amber: {
+          550: "#e7d0ba",
+        },
       },
       textColor: {
         bronze: "var(--color-bronze)",
