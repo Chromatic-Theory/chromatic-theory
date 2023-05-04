@@ -98,7 +98,7 @@ const Home: NextPage<HomeProps> = ({
         <meta name="keywords" content="hair salon, color specialist" />
         <meta name="viewport" content="width=device-width" />
       </Head>
-      <section className="max-w-7xl mx-auto mt-5 px-5 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-24 font-roboto min-h-screen">
+      <section className="max-w-7xl mx-auto mt-5 px-5 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-24 min-h-screen">
         <Hero about={about} />
         <div className="flex justify-center mt-10">
           <BookAppointment />
