@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 
 import { LocationFragment } from "@/graphql-operations";
+import { Fragment } from "react";
 
 type FooterProps = {
   locations: LocationFragment[];
@@ -16,11 +17,8 @@ function Footer({ locations }: FooterProps) {
   return (
     <div>
       {locations?.map((location) => (
-        <>
-          <footer
-            className="bg-zinc-900 bottom-0 p-10"
-            key={location.__typename}
-          >
+        <Fragment key={location.__typename}>
+          <footer className="bg-zinc-900 bottom-0 p-10">
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
               <div className="flex-none lg:flex">
                 <div className="flex flex-col flex-1 pb-4">
@@ -104,7 +102,7 @@ function Footer({ locations }: FooterProps) {
               </div>
             </div>
           </footer>
-        </>
+        </Fragment>
       ))}
     </div>
   );
