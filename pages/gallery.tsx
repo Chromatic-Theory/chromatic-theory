@@ -85,7 +85,7 @@ const Gallery: NextPage<GalleryProps> = ({ galleries }: GalleryProps) => {
       </Head>
       <section className="max-w-7xl mx-auto mt-5 px-5 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-24 min-h-screen">
         <div className="flex flex-col items-center justify-center">
-          <p className="text-4xl mb-5">Gallery</p>
+          <p className="text-4xl mb-5 uppercase text-amber-650">Gallery</p>
           <p className="text-xl mb-5">Here are some photos of my clients.</p>
         </div>
 
