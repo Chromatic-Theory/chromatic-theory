@@ -13,12 +13,12 @@ function BookAppointment() {
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >
-      <span className="relative z-10">Book Appointment</span>
       <span
         className={`absolute inset-0 bg-amber-650 transform origin-bottom transition-transform duration-300 ease-out ${
           hovering ? "scale-y-100" : "scale-y-0"
         }`}
       ></span>
+      <span className="relative">Book Appointment</span>
     </a>
   );
 }
