@@ -4,6 +4,7 @@ interface ServiceCardProps {
   name: string | null | undefined;
   description: string | null | undefined;
   price: string | null | undefined;
+  setPrice: boolean | null | undefined;
   durationHour?: string | null | undefined;
   durationMinutes?: string | null | undefined;
 }
@@ -14,30 +15,8 @@ function ServiceCard({
   price,
   durationHour,
   durationMinutes,
+  setPrice,
 }: ServiceCardProps) {
-  const pricesStartingAt = [
-    "Kid's Haircut",
-    "Bang Trim",
-    "Touchup",
-    "All Over Color",
-    "Balayage Highlight",
-    "Fashion Color",
-    "Balayage Ombré",
-    "Partial Balayage/Ombré",
-    "Babylights",
-    "Babylight",
-    "Balayage Combo",
-    "Partial Babylight",
-    "Bleach Touchup",
-    "Partial Highlight",
-    "Full Highlight",
-    "Toner/Gloss",
-    "Color Correction",
-    "Brazilian Blowout",
-  ];
-
-  const shouldStartWithStartingAt = pricesStartingAt.includes(name || "");
-
   let duration = "";
   if (durationHour && parseInt(durationHour) === 1) {
     duration = "1 hour";
@@ -55,10 +34,8 @@ function ServiceCard({
         <div className="flex flex-col flex-grow px-8 md:px-4 p-8 md:p-6 lg:p-4">
           <div className="flex justify-between">
             <h3 className="mb-2 text-base font-bold tracking-tight">{name}</h3>
-            <p className="text-right ">
-              {shouldStartWithStartingAt
-                ? `Starting at $${price}`
-                : `$${price}`}
+            <p className="text-right">
+              {setPrice ? `$${price}` : `Starting at $${price}`}
             </p>
           </div>
           <p className="flex-grow font-base mb-2">{description}</p>
@@ -95,6 +72,7 @@ function Services({ services }: ServicesProps) {
             name={service.name}
             description={service.description}
             price={service.price}
+            setPrice={service.setPrice}
             durationHour={service.durationHour}
             durationMinutes={service.durationMinutes}
           />
