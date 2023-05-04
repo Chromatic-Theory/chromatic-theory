@@ -19,6 +19,7 @@ import Services from "@/components/landing/Services";
 import Testimonials from "@/components/landing/Testimonials";
 
 import client from "../apollo-client";
+import MeetTheStylist from "@/components/landing/MeetTheStylist";
 
 type HomeProps = {
   about: AllAboutsQuery["allAbout"];
@@ -63,8 +64,8 @@ const Home: NextPage<HomeProps> = ({
   about,
   services,
   testimonials,
-  locations,
 }: HomeProps) => {
+  const { heroImage } = about[0];
   return (
     <>
       <Head>
@@ -99,7 +100,11 @@ const Home: NextPage<HomeProps> = ({
         <meta name="viewport" content="width=device-width" />
       </Head>
       <section className="max-w-7xl mx-auto mt-5 px-5 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-24 min-h-screen">
-        <Hero about={about} />
+        <Hero
+          backgroundUrl={heroImage?.asset?.url ?? ""}
+          backgroundPosition={0}
+        />
+        <MeetTheStylist about={about} />
         <div className="flex justify-center mt-10">
           <BookAppointment />
         </div>
