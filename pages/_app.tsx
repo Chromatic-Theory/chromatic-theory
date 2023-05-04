@@ -9,9 +9,10 @@ const raleway = Raleway({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const sanityLocations = pageProps.locations;
   return (
     <main className={raleway.className}>
-      <Layout>
+      <Layout locations={sanityLocations}>
         <Component {...pageProps} />
       </Layout>
     </main>
