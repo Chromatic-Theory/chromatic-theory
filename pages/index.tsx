@@ -13,13 +13,13 @@ import {
   LocationFragment,
 } from "../graphql-operations";
 
-import BookAppointment from "@/components/landing/BookAppointment";
 import Hero from "@/components/landing/Hero";
+import MeetTheStylist from "@/components/landing/MeetTheStylist";
+import BookAppointment from "@/components/landing/BookAppointment";
 import Services from "@/components/landing/Services";
 import Testimonials from "@/components/landing/Testimonials";
 
 import client from "../apollo-client";
-import MeetTheStylist from "@/components/landing/MeetTheStylist";
 
 type HomeProps = {
   about: AllAboutsQuery["allAbout"];

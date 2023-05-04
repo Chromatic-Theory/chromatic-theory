@@ -15,7 +15,6 @@ import { AllTestimonialsQuery } from "../../graphql-operations";
 interface TestimonialCardProps {
   name: string | null | undefined;
   testimonial: string | null | undefined;
-  typeName: string | null | undefined;
 }
 
 SwiperCore.use([
@@ -69,11 +68,10 @@ function Testimonials({ testimonials }: TestimonialsProps) {
           }}
         >
           {testimonials?.map((testimonial) => (
-            <SwiperSlide key={testimonial.__typename}>
+            <SwiperSlide key={testimonial.name}>
               <TestimonialCard
                 name={testimonial.name}
                 testimonial={testimonial.testimonial}
-                typeName={testimonial.__typename}
               />
             </SwiperSlide>
           ))}
