@@ -31,24 +31,6 @@ const about = {
       of: [{type: 'block'}],
       validation: (Rule: any) => Rule.required(),
     },
-    {
-      name: 'instagram',
-      title: 'Instagram',
-      type: 'url',
-      description: 'Please provide the link to your Instagram here.',
-    },
-    {
-      name: 'yelp',
-      title: 'Yelp',
-      type: 'url',
-      description: 'Please provide the link to your Instagram here.',
-    },
-    {
-      name: 'booking',
-      title: 'Booking',
-      type: 'url',
-      description: 'Please provide the link to book appointments here.',
-    },
   ],
 }
 
