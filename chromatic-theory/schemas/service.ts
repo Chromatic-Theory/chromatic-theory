@@ -46,6 +46,13 @@ const service = {
       description: 'Please provide the price for this service.',
       validation: (Rule: any) => Rule.required(),
     },
+    {
+      title: 'Set Price',
+      name: 'setPrice',
+      type: 'boolean',
+      description: 'If unchecked, this will display (Starting at) before the price.',
+      validation: (Rule: any) => Rule.required(),
+    },
   ],
 }
 

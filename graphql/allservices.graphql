@@ -7,6 +7,7 @@ fragment service on Service {
   durationHour
   durationMinutes
   price
+  setPrice
 }
 
 query allServices {
