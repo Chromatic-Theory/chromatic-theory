@@ -1,43 +1,20 @@
-import Image from "next/image";
-import { PortableText } from "@portabletext/react";
-
-import { AboutFragment } from "@/graphql-operations";
+import Link from "next/link";
+import BookAppointment from "./BookAppointment";
 
 type HeroProps = {
-  about: AboutFragment[];
+  backgroundUrl: string;
+  backgroundPosition: number;
 };
 
-function Hero({ about }: HeroProps) {
-  const { selfie, storyRaw } = about[0];
+function Hero({ backgroundUrl, backgroundPosition }: HeroProps) {
   return (
-    <>
-      <div className="flex flex-col-reverse md:flex-row md:items-center">
-        {storyRaw && (
-          <div className="mb-12 animate-fade-in-up dark:text-white font-roboto text-base md:flex-1">
-            <PortableText
-              value={storyRaw}
-              components={{
-                block: {
-                  normal: ({ children }) => {
-                    return <p className="text-lg md:text-xl">{children}</p>;
-                  },
-                },
-              }}
-            />
-          </div>
-        )}
-        {selfie && (
-          <div className="mb-6 md:mb-0 rounded-full overflow-hidden md:ml-6 mx-auto md:mx-0 border-4 border-amber-550">
-            <Image
-              src={selfie.asset?.url || ""}
-              alt={`Image of ${selfie.asset?.url}` || ""}
-              height={300}
-              width={300}
-            />
-          </div>
-        )}
-      </div>
-    </>
+    <div
+      className="py-32 my-10 min-h-33vh bg-no-repeat bg-cover"
+      style={{
+        backgroundImage: `url(${backgroundUrl})`,
+        backgroundPosition: `${backgroundPosition} center`,
+      }}
+    ></div>
   );
 }
 
