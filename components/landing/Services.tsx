@@ -81,7 +81,7 @@ function Services({ services }: ServicesProps) {
           Service Menu
         </h3>
 
-        <p className="mx-auto mt-3 max-w-2xl text-md sm:text-xl font-roboto sm:mt-4 text-center">
+        <p className="mx-auto mt-3 max-w-2xl text-md sm:text-xl sm:mt-4 text-center">
           Late Policy: There is a 15 minute grace period. If you are more than
           15 minutes late, the appointment may have to be adjusted or
           rescheduled.
