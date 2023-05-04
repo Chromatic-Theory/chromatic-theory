@@ -1,4 +1,7 @@
 fragment location on Location {
+  instagram
+  yelp
+  booking
   address
   addresslinen
   phone

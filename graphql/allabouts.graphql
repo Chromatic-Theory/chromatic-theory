@@ -10,9 +10,6 @@ fragment about on About {
     }
   }
   storyRaw
-  instagram
-  yelp
-  booking
 }
 
 query allAbouts {

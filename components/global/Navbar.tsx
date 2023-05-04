@@ -7,7 +7,6 @@ import cn from "clsx";
 
 const navigation = [
   { name: "Home", href: "/", current: false },
-  { name: "Services", href: "/services", current: false },
   { name: "Gallery", href: "/gallery", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];

@@ -4,6 +4,27 @@ const location = {
   type: 'document',
   fields: [
     {
+      name: 'instagram',
+      title: 'Instagram',
+      type: 'url',
+      description: 'Please provide the link to your Instagram here.',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'yelp',
+      title: 'Yelp',
+      type: 'url',
+      description: 'Please provide the link to your Instagram here.',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'booking',
+      title: 'Booking',
+      type: 'url',
+      description: 'Please provide the link to book appointments here.',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
       name: 'address',
       title: 'Address',
       type: 'string',
