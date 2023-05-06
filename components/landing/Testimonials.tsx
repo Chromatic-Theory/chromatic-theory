@@ -32,11 +32,12 @@ function TestimonialCard({ name, testimonial }: TestimonialCardProps) {
     <>
       <div className="flex items-center h-full w-full">
         <div className="h-full w-full">
-          <div className="p-2 md:p-4">
-            <p className="text-gray-600 text-sm md:text-lg font-medium md:mb-4">
+          <div className="p-10 md:p-12">
+            <p className="text-sm md:text-lg">{name}</p>
+
+            <p className="text-sm md:text-lg font-medium md:mb-4">
               {testimonial}
             </p>
-            <p className="text-gray-500 text-sm md:text-base">{name}</p>
           </div>
         </div>
       </div>
