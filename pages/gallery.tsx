@@ -40,14 +40,16 @@ export const getStaticProps: GetStaticProps<GalleryProps> = async () => {
 };
 
 const Gallery: NextPage<GalleryProps> = ({ galleries }: GalleryProps) => {
-  const [selectedImageIndex, setSelectedImageIndex] = useState(-1);
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(
+    null
+  );
 
   const openModal = (index: number) => {
     setSelectedImageIndex(index);
   };
 
   const closeModal = () => {
-    setSelectedImageIndex(-1);
+    setSelectedImageIndex(null);
   };
 
   return (
@@ -114,7 +116,7 @@ const Gallery: NextPage<GalleryProps> = ({ galleries }: GalleryProps) => {
           })}
         </div>
         <AnimatePresence>
-          {selectedImageIndex !== -1 && (
+          {selectedImageIndex !== null && (
             <motion.div
               className="fixed top-0 left-0 h-full w-full bg-black bg-opacity-70 z-10"
               initial={{ opacity: 0 }}
